@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="description" content="Michelle Miller: Software Engineer" />
 	<meta name="keywords" content="embedded, computer, engineer, firmware, software, engineering, stout">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
 	<link rel="stylesheet" href="res/css/reset.css" />
 	<link rel="stylesheet" href="res/css/style.css" />
 	<script>
@@ -12,6 +13,22 @@ function openNav() {
     document.getElementById("overlay_menu").style.display = "flex";
 } function closeNav() {
     document.getElementById("overlay_menu").style.display = "none";
+}
+
+function toggle_node(node_header) {
+	var node_content = node_header.parentElement.getElementsByClassName("node_content")[0];
+	var node_links = node_header.getElementsByClassName("node_link");
+	if (node_content.style.display == "flex") {
+		node_content.style.display = "none";
+		if (node_links.length !== 0) {
+			node_links[0].style.display = "none";
+		}
+	} else {
+		node_content.style.display  = "flex";
+		if (node_links.length !== 0) {
+			node_links[0].style.display = "inline-block";
+		}
+	}
 }
 	</script>
 </head>
@@ -44,16 +61,18 @@ function openNav() {
 		<p>To see more projects, visit my <a href="">GitHub</a>!</p>
 	</section>
 	<section id="page_content">
-		<div class="portfolio">
-			<img src="portfolio/cee_cardswipe/cee_cardswipe_th2.png">
-			<div>
-				<p>Student Check-In Tracking</p>
+		<div class="node">
+			<div class="node_header" onclick="toggle_node(this)">
+				<p class="node_title">Student Check-In Tracking</p>
+				<a href="" class="node_link">More</a>
 			</div>
-		</div>
-		<div class="portfolio">
-			<img src="portfolio/osier/osier_dashboard.png">
-			<div>
-				<p>Smart Home Dashboard</p>
+			<div class="node_content" value=0>
+				<img src="portfolio/osier/osier_dashboard.png">
+				<div class="node_content_overview">
+				<p>This project is ...</p>
+				</div>
+				<div class="node_content_tech">
+				</div>
 			</div>
 		</div>
 	</section>

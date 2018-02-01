@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Michelle Miller: Software Engineer" />
+	<meta name="keywords" content="embedded, computer, engineer, firmware, software, engineering, stout">
+	<link rel="stylesheet" href="res/css/reset.css" />
+	<link rel="stylesheet" href="res/css/style.css" />
+	<script>
+	
+function openNav() {
+    document.getElementById("overlay_menu").style.display = "flex";
+} function closeNav() {
+    document.getElementById("overlay_menu").style.display = "none";
+}
+	</script>
+</head>
+<body>
+	<section id="overlay_menu" class="overlay">
+		<a  class="menu_close_button" onclick="closeNav()">&times;</a>
+		<h1 id="site_nav_h1">Site Navigation:</h1>
+		<nav id="site_nav">
+			<a href="index.html">About</a>
+			<a href="http://michellemiller.online/resources/pdf/resume_mmiller.pdf" target="_blank">Resume</a>
+			<a href="portfolio.html">Portfolio</a>
+			<a href="http://blog.michellemiller.online/">Blog</a>
+		</nav>
+		<h1 id="social_nav_h1">Find me on:</h1>
+		<nav id="social_nav">
+			<a href="https://github.com/chellimiller/">GitHub</a>
+			<a href="https://www.linkedin.com/in/chellicmiller/">LinkedIn</a>
+			<a href="https://codefights.com/profile/chelli_m">CodeFights</a>
+			<a href="https://www.instructables.com/member/chellicmiller/">Instructables</a>
+		</nav>
+	</section>
+	<header>
+		<p><span id="site_title">Michelle Miller</span> <span id="site_tagline">{Software Engineer}</span></p>
+		<a id="menu_open_button" onclick="openNav()" href="javascript:void(0)">&#9776; Menu</a>
+	</header>
+	<main>
+	<section id="page_description">
+		<h1>Welcome to my portfolio</h1>
+		<p>Below are some of the projects that I've completed</p>
+		<p>To see more projects, visit my <a href="">GitHub</a>!</p>
+	</section>
+	<section id="page_content">
+		<div class="portfolio">
+			<img src="portfolio/cee_cardswipe/cee_cardswipe_th2.png">
+			<div>
+				<p>Student Check-In Tracking</p>
+			</div>
+		</div>
+		<div class="portfolio">
+			<img src="portfolio/osier/osier_dashboard.png">
+			<div>
+				<p>Smart Home Dashboard</p>
+			</div>
+		</div>
+	</section>
+	</main>
+	<footer>
+		<section>
+			<a href="http://www.noahjmiller.com/">Photography by<br />Noah J Miller</a>
+		</section>
+	</footer>
+</body>
+</html>

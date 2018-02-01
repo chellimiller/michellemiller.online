@@ -1,85 +1,135 @@
-/* Base Settings, Display, and Positioning */
 html {
-  position:         relative;
-  min-height:       100%;
-} body, header, footer {
-  width:            100%;
-} header, nav, main, footer, section {
-  display:          inline-block;
-} main {
-  margin-bottom:    10em;
-  padding:          1em;
-} section {
-  padding:          .5em;
-  min-width:        15em;
-  max-width:        25em;
-  vertical-align:   middle;
-} footer {
-  position:         absolute;
-  bottom:           0;
-  left:             0;
-  max-height:       10em;
-} nav {
-  padding:          1em;
-} nav a {
-  display:          inline-block;
-  padding:          .25em;
-  margin:           .25em;
-} #social a {
-  padding:          .5em;
-} img {
-  width:            80%;
-  max-width:        20em;
+	position:         relative;
+	min-height:       100%;
+	min-width:        100%;
+} body {
+	width:            100%;
+	min-height:       100vh;
+	display:          flex;
+	flex-flow:        column nowrap;
+	font-family:      'Questrial', sans-serif;
+	text-align:       center;
+	font-size:        calc(12px + 1vh);
+	background:       #FFFFFF;
+	color:            #000000;
+} a {
+	text-decoration:  none;
+	color:            inherit;
 }
 
-/* Background and Colors */
-body {
-  background:       #FFFFFF;
-  color:            #000000;
-} header {
-  border-bottom:    .05em solid #CCCCCC;
-} footer {
-  border-top:       .05em solid #CCCCCC;
-} 
-a {
-  color:            inherit;
-} nav a:hover {
-  color:            #FF0000;
-} header nav a {
-  border-left:     .15em solid #FF0000;
-} header nav a:hover {
-  border-left:     .15em solid #000000;
-} #social a {
-  background:      #FF0000;
-  color:           #FFFFFF;
-  border-radius:   .25em;
-} #social a:hover {
-  background:      #000000;
+#overlay_menu {
+	display:          none;
+	flex-flow:        column nowrap;
+	align-items:      center;
+    height:           100vh;
+    width:            100vw;
+    position:         fixed;
+    z-index:          100;
+	background:       inherit;
+    color:            #333333;
+} #overlay_menu h1 {
+	font-size:        2em;
+	padding:          1em 0 .5em 0;
+	max-width:        10em;
+} #overlay_menu nav {
+	display:          flex;
+	flex-flow:        row wrap;
+	justify-content:  center;
+	align-content:    center;
+	max-width:        20em;
+} #overlay_menu nav a {
+	color:            #C41E3A;
+	padding:          1em;
+} #overlay_menu a:hover {
+	text-decoration:  none;
+	color:            #CCCCCC;
+} #overlay_menu .menu_close_button {
+	padding:          1em;
+	font-size:        2em;
+	align-self:       flex-end;
 }
 
-/* Font */
-body {
-  font-family:      'Questrial', sans-serif;
-  text-align:       center;
-  font-size:        calc(12px + 1vh);
-} main {
-  line-height:      1.5;
-} p {
-  padding:          .5em;
-  text-align:       left;
-} #title * {
-  text-align:       center;
-  padding:          .1em;
-} h1, h2 {
-  padding:          .25em;
-  font-weight:      bold;
-  text-align:       left;
-} h1 {
-  font-size:        1.5em;
-} h2 {
-  font-size:        1.25em;
-} nav a {
-  font-size:       .9em;
-} footer a:hover, header a, #social a {
-  text-decoration:    none;
+header {
+	display:          flex;
+	justify-content:  space-between;
+	align-items:      flex-end;
+	flex-flow:        row wrap;
+	font-size:        1.25em;
+	color:            #C41E3A;
+	background:       #000000;
+} header p, header a {
+	display:          inline-block;
+	padding:          0;
+	margin:           1em;
+} header #site_tagline {
+	color:            #CCCCCC;
+	font-size:        .75em;
+} header a:hover {
+	color:            #CCCCCC;
+}
+
+main {
+	display:          flex;
+	flex-flow:        column nowrap;
+	margin:           2em;
+}
+
+#page_description {
+	display:          flex;
+	flex-flow:        column nowrap;
+} #page_description h1 {
+	font-weight:      bold;
+	font-size:        1.5em;
+	color:            #C41E3A;
+	padding:          .5em;
+} #page_description p {
+	padding-bottom:   .35em;
+}
+
+#page_content {
+	display:          flex;
+	flex-flow:        row wrap;
+	flex-grow:        2;
+	justify-content:  center;
+	align-items:      center;
+	
+}
+
+.portfolio {
+	position:         relative;
+	width:            15em;
+	height:           15em;
+	margin:           1em;
+	display:          flex;
+	flex-flow:        column nowrap;
+} .portfolio img {
+	width:            100%;
+	position:         absolute;
+	left:             0;
+	top:              0;
+} .portfolio div {
+	height:           100%;
+	width:            100%;
+	display:          flex;
+	flex-flow:        column nowrap;
+	justify-content:  center;
+	align-items:      center;
+	z-index:          1;
+	background:       #FFFFFFCC;
+	font-weight:      bold;
+} .portfolio div:hover {
+	background:       #000000DD;
+	color:            #C41E3A;
+} .portfolio p {
+	font-size:        2em;
+	padding:          1em;
+}
+
+footer {
+	padding:          3em;
+} footer a {
+	text-decoration:  underline;
+} footer a:hover {
+	color:            #C41E3A;
+	text-decoration:  none;
 }
